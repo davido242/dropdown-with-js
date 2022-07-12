@@ -1,0 +1,98 @@
+body {
+    font-family: sans-serif;
+    background: navy;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: flex;
+}
+
+.dropdown {
+    min-width: 15rem;
+    position: relative;
+    margin: 2rem;
+}
+.dropdown * {
+    box-sizing: border-box;
+}
+.select {
+    background-color: red;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #2a2f3b;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+/* added in Javascript to function */
+
+.selected-clicked {
+    border: 2px solid #26489a;
+    box-shadow: 0 0 0.8em #26489a;
+}
+.select:hover {
+    background-color: #323741;
+}
+.caret {
+    width: 0px;
+    height: 0px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #fff;
+    transition: 0.3s;
+}
+
+/* Rotate Styles (Added in javascript to function) */
+
+.caret-rotate {
+    transform: rotate(180deg);
+}
+
+.menu {
+    list-style: none;
+    padding: 0.2em 0.5em;
+    background: #323741;
+    border: 1px solid #363a43;
+    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+    color: #9fa5b5;
+    position: absolute;
+    top: 3rem;
+    left: 50%;
+    width: 100%;
+    transform: translatex(-50%);
+    opacity: 0;
+    display: none;
+    transition: 0.2s;
+    z-index: 1;   
+}
+.menu li {
+    padding: 0.7rem 0.5rem;
+    margin: 0.3rem 0;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.menu li:hover {
+    background-color: #2a2d35;
+}
+
+/* Active styles */
+/* added in js afterwards */
+
+.active {
+    background: #23242a;
+}
+
+/* Open styles */
+/* added in js afterwards */
+
+.menu-open {
+    display: block;
+    opacity: 1;
+}
